@@ -59,12 +59,23 @@ public class EndMenu : MonoBehaviour
         reloading = true;
         Time.timeScale = 1f;
         player.GetComponent<Player>().Unfreeze();
-        SceneManager.LoadSceneAsync("MainScene");
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
+
+    public void Continue()
+    {
+        Debug.Log("Doesn't work yet");
+    }
+
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadSceneAsync("TitleScreen");
+        SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void LoadLevelSelect() {
+        SceneManager.LoadScene("LevelMenu");
     }
 
     public void Quit()

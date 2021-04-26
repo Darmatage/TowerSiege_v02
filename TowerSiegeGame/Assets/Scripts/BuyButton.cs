@@ -1,4 +1,4 @@
-﻿/* 
+﻿/*
  * Buy units.
  * Attach this script to a BuyButton object and set Button Index appropriately.
  */

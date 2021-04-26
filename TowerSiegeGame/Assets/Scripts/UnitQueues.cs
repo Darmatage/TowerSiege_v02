@@ -20,7 +20,6 @@ public class UnitQueues : MonoBehaviour
     void Start()
     {
         unitCountTexts = GameObject.Find("Canvas/UnitCountTexts").GetComponentsInChildren<TextMeshProUGUI>();
-
         unitQueues = new List<Queue<GameObject>>();
         for (int i = 0; i < queueCount; i++)
         {

@@ -45,8 +45,4 @@ public class PauseMenu : MonoBehaviour
         player.GetComponent<Player>().Freeze();
     }
 
-    public void Quit()
-    {
-        SceneManager.LoadScene("TitleScreen");
-    }
 }

@@ -16,7 +16,6 @@ public class VolumeControl : MonoBehaviour
         audios = GameObject.FindGameObjectsWithTag("Audio");
         foreach (GameObject currAudio in audios) {
         	audioSources.Add(currAudio.GetComponent<AudioSource>());
-
         }
     }
 
@@ -25,7 +24,6 @@ public class VolumeControl : MonoBehaviour
     {
         foreach (AudioSource audio in audioSources) {
         	audio.volume = volumeSlider.value;
-
         }
     }
 }
