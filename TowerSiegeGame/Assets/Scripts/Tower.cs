@@ -66,7 +66,6 @@ public class Tower : MonoBehaviour
         // Recieve a debuff.
         if (debuffTimer > 0)
         {
-            Debug.Log("debuffed");
             debuffTimer -= Time.deltaTime;
             gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
             if (debuffTimer <= 0)
