@@ -21,8 +21,10 @@ public class EndMenu : MonoBehaviour
     public RoundTimer timer;
     public Money gold;
     private bool reloading;
+    /*
     private int maxRound = 3;
     private int currentRound = 1;
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,7 @@ public class EndMenu : MonoBehaviour
         // End the game if the player otherwise lost.
         if (Lost())
         {
-            DisplayEndMenu("GAME OVER\nYou did not seige the castle in time.");
+            DisplayEndMenu("GAME OVER\nYou ran out of money and units.");
         }
     }
 
@@ -96,6 +98,8 @@ public class EndMenu : MonoBehaviour
             GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
             if (units.Length == 0)
             {
+                return true;
+                /*
                 if (currentRound == maxRound)
                 {
                     return true;
@@ -103,6 +107,7 @@ public class EndMenu : MonoBehaviour
                 currentRound++;
                 timer.Start();
                 gold.Start();
+                */
             }
         }
 
