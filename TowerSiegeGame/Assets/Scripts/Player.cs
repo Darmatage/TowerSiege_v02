@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
 	private GameObject gameController;
 	private TextMeshPro healthText;
+	private TextMeshProUGUI buffText;
+	private TextMeshProUGUI debuffText;
 	private float buffTimer;
 	private float debuffTimer;
 	private bool buffReady;
@@ -25,6 +27,9 @@ public class Player : MonoBehaviour
 	void Start()
 	{
 		gameController = GameObject.FindGameObjectWithTag("GameController");
+		healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
+		buffText = GameObject.Find("Canvas/BuffText").GetComponent<TextMeshProUGUI>();
+		debuffText = GameObject.Find("Canvas/DebuffText").GetComponent<TextMeshProUGUI>();
 
 		frozen = false;
 		buffReady = true;
@@ -32,14 +37,16 @@ public class Player : MonoBehaviour
 		buffTimer = 0f;
 		debuffTimer = 0f;
 
-		// Set the health text.
-		healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
 		healthText.SetText(health.ToString());
+		SetBuffText();
+		SetDebuffText();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		SetBuffText();
+		SetDebuffText();
 		if (!frozen)
 		{
 			// Control the player's movement.
@@ -102,7 +109,6 @@ public class Player : MonoBehaviour
 					if (buffTimer <= 0)
 					{
 						buffReady = true;
-						Debug.Log("buff ready");
 					}
 				}
 			}
@@ -120,9 +126,9 @@ public class Player : MonoBehaviour
 					if (debuffTimer <= 0)
                     {
 						debuffReady = true;
-						Debug.Log("debuff ready");
                     }
                 }
+
             }
 
 			// Use buff.
@@ -209,4 +215,30 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+	// Set the buff text.
+	private void SetBuffText()
+    {
+		if (buffReady)
+		{
+			buffText.SetText("[2] READY");
+		}
+		else
+        {
+			buffText.SetText("[2] " + buffTimer.ToString("0") + "s");
+        }
+	}
+
+	// Set the debuff text.
+	private void SetDebuffText()
+    {
+		if (debuffReady)
+        {
+			debuffText.SetText("[1] READY");
+        }
+		else
+		{
+			debuffText.SetText("[1] " + debuffTimer.ToString("0") + "s");
+		}
+	}
 }
