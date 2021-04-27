@@ -191,7 +191,6 @@ public class Player : MonoBehaviour
 	// Use the player buff ability.
 	private void Buff()
 	{
-		Debug.Log("buff used");
 		GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
 		foreach (GameObject unit in units)
 		{
@@ -205,7 +204,6 @@ public class Player : MonoBehaviour
 	// Use the player debuff ability.
 	private void Debuff()
     {
-		Debug.Log("debuff used");
 		GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
 		foreach (GameObject tower in towers)
         {

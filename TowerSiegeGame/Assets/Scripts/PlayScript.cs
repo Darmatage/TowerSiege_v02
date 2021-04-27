@@ -23,6 +23,7 @@ public class PlayScript : MonoBehaviour
     // Note: Loads MainScene by default if the level scene has not been implemented yet.
     public void PlayLevel(int levelNumber)
     {
+        Time.timeScale = 1f;
         if (levelNumber < levelsImplemented)
         {
             SceneManager.LoadScene("Level" + levelNumber);

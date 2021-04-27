@@ -13,6 +13,7 @@ public class EndMenu : MonoBehaviour
 {
     public GameObject endMenu;
     public GameObject endText;
+    public int levelNumber;
 
     private GameObject gameController;
     private GameObject castle;
@@ -65,16 +66,20 @@ public class EndMenu : MonoBehaviour
 
     public void Continue()
     {
-        Debug.Log("Doesn't work yet");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level" + (levelNumber + 1));
     }
 
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("TitleScreen");
     }
 
-    public void LoadLevelSelect() {
+    public void LoadLevelSelect() 
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("LevelMenu");
     }
 

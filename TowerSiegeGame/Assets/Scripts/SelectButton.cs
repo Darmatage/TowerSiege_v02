@@ -15,8 +15,7 @@ public class SelectButton : MonoBehaviour
     private GameObject gameController;
     private GameObject startRoundButton;
     private Image[] allButtons;
-
-
+    private bool selected;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +33,14 @@ public class SelectButton : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = Color.gray;
         }
+        else if (!selected)
+        {
+            gameObject.GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            gameObject.GetComponent<Image>().color = Color.green;
+        }
     }
 
     // On-click: Set the selected unit in UnitQueues and update the button colors.
@@ -49,7 +56,13 @@ public class SelectButton : MonoBehaviour
                 continue;
             }
             image.color = Color.white;
+            image.gameObject.GetComponent<SelectButton>().Deselect();
         }
-        gameObject.GetComponent<Image>().color = Color.green;
+        selected = true;
+    }
+
+    public void Deselect()
+    {
+        selected = false;
     }
 }
