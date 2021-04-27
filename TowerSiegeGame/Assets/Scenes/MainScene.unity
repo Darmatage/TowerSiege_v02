@@ -2558,6 +2558,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 182977218}
     m_Modifications:
+    - target: {fileID: 565074175542949254, guid: a91062ab383367247a266562144b2f30,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca8f29b065da24ddb98929e4ea70647e, type: 2}
     - target: {fileID: 654683516473024783, guid: a91062ab383367247a266562144b2f30,
         type: 3}
       propertyPath: m_Parameters.colorGradient.m_Mode
@@ -20752,7 +20757,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f3bfa87ec14e6c34db934a523d5f3046, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

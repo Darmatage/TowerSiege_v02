@@ -10,13 +10,18 @@ public class Tower : MonoBehaviour
     public GameObject projectile;
     public float interval;
     public float range;
-    public int health;
+    public float health;
+
 
     private TextMeshPro healthText;
     private GameObject[] units;
     private GameObject target;
     private float shootTimer;
     private float debuffTimer;
+
+    public Sprite[] towers;
+    public SpriteRenderer spriteRenderer;
+    private float original_health;
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +32,14 @@ public class Tower : MonoBehaviour
         debuffTimer = 0f;
 
         healthText.SetText(health.ToString());
+        original_health = health;
         // DrawCircle();
     }
 
     // Update is called once per frame
     void Update()
     {
+        checkSprite();
         // Shoot the closest unit in range.
         units = GameObject.FindGameObjectsWithTag("Unit");
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
@@ -67,8 +74,41 @@ public class Tower : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
+        
     }
 
+    private void checkSprite()
+    {
+        if ((health / original_health) == 1){
+            spriteRenderer.sprite = towers[0];
+        } else if ((health / original_health) > .92){
+            spriteRenderer.sprite = towers[1];
+        } else if ((health / original_health) > .84){
+            spriteRenderer.sprite = towers[2];
+        } else if ((health / original_health) > .76){
+            spriteRenderer.sprite = towers[3];
+        } else if ((health / original_health) > .68){
+            spriteRenderer.sprite = towers[4];
+        } else if ((health / original_health) > .60){
+            spriteRenderer.sprite = towers[5];
+        } else if ((health / original_health) > .52){
+            spriteRenderer.sprite = towers[6];
+        } else if ((health / original_health) > .44){
+            spriteRenderer.sprite = towers[7];
+        } else if ((health / original_health) > .36){
+            spriteRenderer.sprite = towers[8];
+        } else if ((health / original_health) > .28){
+            spriteRenderer.sprite = towers[9];
+        } else if ((health / original_health) > .20){
+            spriteRenderer.sprite = towers[10];
+        } else if ((health / original_health) > .12){
+            spriteRenderer.sprite = towers[11];
+        } else if ((health / original_health) > .8){
+            spriteRenderer.sprite = towers[12];
+        } else {
+            spriteRenderer.sprite = towers[13];
+        }
+    }
     // Take damage when touched by a unit.
     public void TakeDamage(int damage)
     {
