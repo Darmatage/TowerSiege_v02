@@ -4693,6 +4693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endMenu: {fileID: 533855108}
   endText: {fileID: 636297446}
+  levelNumber: 0
   timer: {fileID: 386393021}
   gold: {fileID: 386393022}
 --- !u!114 &386393021
