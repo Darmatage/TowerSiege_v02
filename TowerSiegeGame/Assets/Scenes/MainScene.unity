@@ -28158,6 +28158,17 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2190825361246815439, guid: cfebdb67a585e4de08e881369ab5ce11,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7936398955963880015, guid: 651f23c9dd4284aac812be9d9b913b12,
+        type: 3}
+    - target: {fileID: 2190825361246815439, guid: cfebdb67a585e4de08e881369ab5ce11,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6939269348732204904, guid: cfebdb67a585e4de08e881369ab5ce11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28218,6 +28229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracks
       objectReference: {fileID: 0}
+    - target: {fileID: 8429427448834297340, guid: cfebdb67a585e4de08e881369ab5ce11,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e0fef68b2dc2641a59ac834117043554, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfebdb67a585e4de08e881369ab5ce11, type: 3}
 --- !u!1001 &4557159902281648990
