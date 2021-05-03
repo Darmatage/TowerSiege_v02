@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 				position.x = position.x - speed;
 				this.transform.position = position;
 				
-				GetComponent<Animator>().SetTrigger("Left");
+				// GetComponent<Animator>().SetTrigger("Left");
 			}
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 				position.x = position.x + speed;
 				this.transform.position = position;
 
-				GetComponent<Animator>().SetTrigger("Right");
+				// GetComponent<Animator>().SetTrigger("Right");
 
 			}
 			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 				position.y = position.y + speed;
 				this.transform.position = position;
 
-				GetComponent<Animator>().SetTrigger("Up");
+				// GetComponent<Animator>().SetTrigger("Up");
 
 			}
 			if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
 				position.y = position.y - speed;
 				this.transform.position = position;
 
-				GetComponent<Animator>().SetTrigger("Down");
+				// GetComponent<Animator>().SetTrigger("Down");
 			}
 
 			// animator stuff
