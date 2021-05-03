@@ -13807,6 +13807,11 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5473409634470811916, guid: 58b8a836aec17ba47a6550d9a9888863,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5473409634470811918, guid: 58b8a836aec17ba47a6550d9a9888863,
         type: 3}
       propertyPath: health

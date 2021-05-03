@@ -322,6 +322,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  castles:
+  - {fileID: 3563594313405875369, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -6813107004697981827, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -6953787091006713720, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 8787227621864861935, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -4932529118922120557, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -3124796439421265357, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -6738266200869968871, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 6239248800853354920, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 7176724907779840941, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 6674537724134872372, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -190402226053728729, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 3843137463355669528, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -4499486569944109890, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -2681608662419113574, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: -367126524044488814, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  - {fileID: 6632036309165409715, guid: 388585ba5d22448d4bc2717bf0eef1c0, type: 3}
+  spriteRenderer: {fileID: 5473409634470811954}
 --- !u!95 &5473409634470811916
 Animator:
   serializedVersion: 3
