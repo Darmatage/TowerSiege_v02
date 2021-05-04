@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4557159902570077926}
   - component: {fileID: 2369040852775920810}
+  - component: {fileID: 1924353478292363816}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: spawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4557159902570077928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.597345, y: 3.81394, z: 9.040961}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalPosition: {x: -14.1632, y: 3.6516, z: 9.040961}
+  m_LocalScale: {x: 9.57339, y: 12.971361, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,3 +82,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1924353478292363816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4557159902570077928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d208414f5a736c4ebe2cb8d10a55525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnIndex: 0
+  interval: 0
