@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 5473409634470811917}
   - component: {fileID: 5473409634470811918}
   - component: {fileID: 5473409634470811916}
+  - component: {fileID: 812162652636430138}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Castle
@@ -460,6 +461,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &812162652636430138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473409634470811953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5c5014aeac3412583f89ac40173bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7831097398452609057
 GameObject:
   m_ObjectHideFlags: 0

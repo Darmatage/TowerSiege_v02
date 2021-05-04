@@ -74,4 +74,16 @@ public class UnitQueues : MonoBehaviour
 
         return false;
     }
+
+    public void Reset(){
+        unitQueues = new List<Queue<GameObject>>();
+        for (int i = 0; i < queueCount; i++)
+        {
+            unitQueues.Add(new Queue<GameObject>());
+        }
+    }
+
+    public void SpecificReset(int queueIndex){
+        unitQueues[queueIndex] = new Queue<GameObject>();
+    }
 }
