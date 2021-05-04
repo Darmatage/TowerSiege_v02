@@ -39,9 +39,6 @@ public class Player : MonoBehaviour
 		buffBar = GameObject.Find("Canvas/BuffText/BuffBG/BuffBar").GetComponent<Image>();
 		debuffBar = GameObject.Find("Canvas/DebuffText/DebuffBG/DebuffBar").GetComponent<Image>();
 
-		Debug.Log(buffBar);
-		Debug.Log(debuffBar);
-
 		frozen = false;
 		buffReady = true;
 		debuffReady = true;

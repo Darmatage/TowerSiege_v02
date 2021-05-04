@@ -76,6 +76,7 @@ public class EndMenu : MonoBehaviour
 
     public void Continue()
     {
+        reloading = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level" + (levelNumber + 1));
     }
@@ -83,12 +84,14 @@ public class EndMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        reloading = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene("TitleScreen");
     }
 
     public void LoadLevelSelect() 
     {
+        reloading = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene("LevelMenu");
     }

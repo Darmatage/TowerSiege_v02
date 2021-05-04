@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d8d122852b71649aefbffbc6330903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 100000
+  money: 2000
 --- !u!114 &208388097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18351,7 +18351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 14.8, y: 24.999996}
+  m_AnchoredPosition: {x: 14.800003, y: 24.999996}
   m_SizeDelta: {x: -60.426025, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368247045
