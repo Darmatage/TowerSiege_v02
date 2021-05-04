@@ -33,7 +33,7 @@
         if(selectedUnit != null) {
            if (gameController.GetComponent<Money>().CanAfford(selectedUnit))
            {
-               gameController.GetComponent<UnitQueues>().Enqueue(buttonIndex);
+               gameController.GetComponent<UnitQueues>().Enqueue(buttonIndex, selectedUnit);
                gameController.GetComponent<Money>().DeductFunds(selectedUnit);
            }
        }
