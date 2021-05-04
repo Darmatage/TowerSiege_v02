@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4898937908165860278}
   health: 50
-  speed: 0.05
+  speed: 0.1
   buffCooldown: 10
   buffRange: 5
   debuffCooldown: 10

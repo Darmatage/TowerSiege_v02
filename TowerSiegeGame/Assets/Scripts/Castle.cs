@@ -78,14 +78,8 @@ public class Castle : MonoBehaviour
         if (health <= 0)
         {
             health = 0;
-            gameObject.GetComponent<BlackoutLevels>().defeatedLevel();
         }
-        // healthText.SetText(health.ToString());
         gameObject.GetComponent<Animator>().enabled = false;
-        // if (health <= 0)
-        // {
-        //     gameObject.SetActive(false);
-        // }
     }
 
     private void SetHealthBar()

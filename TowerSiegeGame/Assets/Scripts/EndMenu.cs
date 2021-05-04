@@ -21,11 +21,13 @@ public class EndMenu : MonoBehaviour
     public RoundTimer timer;
     public Money gold;
     private bool reloading;
+    private bool unlockLevel;
 
     Castle castlescript;
     /*
     private int maxRound = 3;
     private int currentRound = 1;
+    castle.GetComponent<BlackoutLevels>().defeatedLevel();
     */
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class EndMenu : MonoBehaviour
         castlescript = castle.GetComponent<Castle>();
         player = GameObject.FindGameObjectWithTag("Player");
         reloading = false;
+        unlockLevel = true;
     }
 
     // Update is called once per frame
@@ -44,6 +47,10 @@ public class EndMenu : MonoBehaviour
         // End the game if the castle is destroyed.
         if (castlescript.health <= 0) 
         {
+            if(unlockLevel) {
+                castle.GetComponent<BlackoutLevels>().defeatedLevel();
+                unlockLevel = false;
+            }
             DisplayEndMenu("CONGRATULATIONS\nYou destroyed the castle.");
         }
 

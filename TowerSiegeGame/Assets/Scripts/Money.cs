@@ -48,8 +48,9 @@
 
     // Check if the player has money.
  	public bool HasMoney()
- 	{
- 		if (currentMoney > 0)
+ 	{	
+ 		GameObject[] coins = GameObject.FindGameObjectsWithTag("MoneyBag");
+ 		if (currentMoney > 25 || coins.Length > 0)
  		{
  			return true;
  		}
