@@ -17,6 +17,8 @@ public class Tower : MonoBehaviour
     // private TextMeshPro healthText;
     private GameObject[] units;
     private GameObject target;
+    private GameObject gameController;
+    private LineRenderer line;
     private float shootTimer;
     private float debuffTimer;
 
@@ -28,12 +30,14 @@ public class Tower : MonoBehaviour
     void Start()
     {
         // healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
+        // healthText.SetText(health.ToString());
 
         shootTimer = interval;
         debuffTimer = 0f;
 
-        // healthText.SetText(health.ToString());
-        // DrawCircle();
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+        line = gameObject.GetComponent<LineRenderer>();
+        DrawCircle();
 
         original_health = health;
         SetHealthBar();
@@ -79,6 +83,10 @@ public class Tower : MonoBehaviour
             }
         }
         
+        if (gameController.GetComponent<RoundTimer>().RoundStarted())
+        {
+            HideCircle();
+        }
     }
 
     private void checkSprite()
@@ -174,9 +182,6 @@ public class Tower : MonoBehaviour
     private void DrawCircle()
     {
         int vertexNumber = 50;
-
-        LineRenderer line = gameObject.GetComponent<LineRenderer>();
-        line.material.color = Color.red;
         line.startWidth = 0.1f;
         line.endWidth = 0.1f;
         line.loop = true;
@@ -192,5 +197,11 @@ public class Tower : MonoBehaviour
             Vector3 initialRelativePosition = new Vector3(0, range, 0);
             line.SetPosition(i, transform.position + rotationMatrix.MultiplyPoint(initialRelativePosition));
         }
+    }
+
+    // Hide the circle.
+    private void HideCircle()
+    {
+        line.positionCount = 0;
     }
 }
