@@ -15,15 +15,18 @@ public class UnitQueues : MonoBehaviour
     private List<Queue<GameObject>> unitQueues;
     private TextMeshProUGUI[] unitCountTexts;
     private GameObject selectedUnit;
+    private List<int> moneySpent;
 
     // Start is called before the first frame update
     void Start()
     {
         unitCountTexts = GameObject.Find("Canvas/UnitCountTexts").GetComponentsInChildren<TextMeshProUGUI>();
         unitQueues = new List<Queue<GameObject>>();
+        moneySpent = new List<int>();
         for (int i = 0; i < queueCount; i++)
         {
             unitQueues.Add(new Queue<GameObject>());
+            moneySpent.Add(0);
         }
     }
 
@@ -47,9 +50,10 @@ public class UnitQueues : MonoBehaviour
         return selectedUnit;
     }
 
-    public void Enqueue(int queueIndex)
+    public void Enqueue(int queueIndex, GameObject unit)
     {
         unitQueues[queueIndex].Enqueue(selectedUnit);
+        moneySpent[queueIndex] += unit.GetComponent<Unit>().cost;
     }
 
     public GameObject Dequeue(int queueIndex)
@@ -76,6 +80,8 @@ public class UnitQueues : MonoBehaviour
     }
 
     public void Reset(){
+        gameObject.GetComponent<Money>().CollectMoney(moneySpent[0]);
+        moneySpent[0] = 0;
         unitQueues = new List<Queue<GameObject>>();
         for (int i = 0; i < queueCount; i++)
         {
@@ -84,6 +90,8 @@ public class UnitQueues : MonoBehaviour
     }
 
     public void SpecificReset(int queueIndex){
+        gameObject.GetComponent<Money>().CollectMoney(moneySpent[queueIndex]);
+        moneySpent[queueIndex] = 0;
         unitQueues[queueIndex] = new Queue<GameObject>();
     }
 }
