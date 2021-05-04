@@ -7,22 +7,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+// using TMPro;
 
 public class Unit : MonoBehaviour
 {
+    public Image healthBar;
     public int health;
     public float speed;
     public int damage;
     public int cost;
     public float attackFreq;
 
-    private TextMeshPro healthText;
+    // private TextMeshPro healthText;
     private Vector2[] waypoints;
     private int spawnIndex;
     private int numWaypoints;
     private int waypointIndex;
     private float attackTimer;
+    private int maxHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -35,14 +38,14 @@ public class Unit : MonoBehaviour
             waypoints[i] = GameObject.Find("Waypoints" + spawnIndex + "/Waypoint" + i).transform.position;
         }
 
-        // Set the first waypoint index to zero.
         waypointIndex = 0;
+        maxHealth = health;
+        attackTimer = attackFreq;
 
-        // Set the health text.
+        /* Set the health text.
         healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
         SetHealthText();
-
-        attackTimer = attackFreq;
+        */
     }
 
     // Update is called once per frame
@@ -87,7 +90,8 @@ public class Unit : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        SetHealthText();
+        SetHealthBar();
+        // SetHealthText();
         if (health <= 0)
         {  
         	GameObject coin = Resources.Load<GameObject>("coin");
@@ -101,14 +105,22 @@ public class Unit : MonoBehaviour
     public void IncreaseHealth()
     {
         health *= 2;
-        SetHealthText();
+        maxHealth *= 2;
+        SetHealthBar();
+        // SetHealthText();
         gameObject.GetComponent<SpriteRenderer>().color = Color.green;
     }
 
-    // Set the health text.
+    /* Set the health text.
     private void SetHealthText()
     {
         healthText.SetText(health.ToString());
+    }
+    */
+
+    private void SetHealthBar()
+    {
+        healthBar.fillAmount = (float)health / maxHealth;
     }
 
     // Inflict damage when touching a tower or the castle.

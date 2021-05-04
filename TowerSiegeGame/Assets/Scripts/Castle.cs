@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+// using TMPro;
 
 public class Castle : MonoBehaviour
 {
+    public Image healthBar;
     public float health;
 
-    private TextMeshPro healthText;
+    // private TextMeshPro healthText;
 
     public Sprite[] castles;
     public SpriteRenderer spriteRenderer;
@@ -17,9 +19,11 @@ public class Castle : MonoBehaviour
     void Start()
     {
         // Set the health text to the current health.
-        healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
-        healthText.SetText(health.ToString());
+        // healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
+        // healthText.SetText(health.ToString());
+
         original_health = health;
+        SetHealthBar();
     }
 
     private void checkSprite()
@@ -70,11 +74,12 @@ public class Castle : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        SetHealthBar();
         if (health <= 0)
         {
             health = 0;
         }
-        healthText.SetText(health.ToString());
+        // healthText.SetText(health.ToString());
         gameObject.GetComponent<Animator>().enabled = false;
         // if (health <= 0)
         // {
@@ -82,5 +87,8 @@ public class Castle : MonoBehaviour
         // }
     }
 
-    
+    private void SetHealthBar()
+    {
+        healthBar.fillAmount = health / original_health;
+    }
 }

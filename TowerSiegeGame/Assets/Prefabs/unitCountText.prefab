@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5367963784854245056}
   - component: {fileID: 5738618389288022156}
   m_Layer: 0
-  m_Name: UnitCountText
+  m_Name: unitCountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535

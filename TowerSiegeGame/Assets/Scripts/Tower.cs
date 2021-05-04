@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+// using TMPro;
 
 public class Tower : MonoBehaviour
 {
+    public Image healthBar;
     public GameObject projectile;
     public float interval;
     public float range;
     public float health;
 
-
-    private TextMeshPro healthText;
+    // private TextMeshPro healthText;
     private GameObject[] units;
     private GameObject target;
     private float shootTimer;
@@ -26,20 +27,23 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
+        // healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
 
         shootTimer = interval;
         debuffTimer = 0f;
 
-        healthText.SetText(health.ToString());
-        original_health = health;
+        // healthText.SetText(health.ToString());
         // DrawCircle();
+
+        original_health = health;
+        SetHealthBar();
     }
 
     // Update is called once per frame
     void Update()
     {
         checkSprite();
+
         // Shoot the closest unit in range.
         units = GameObject.FindGameObjectsWithTag("Unit");
         GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
@@ -113,13 +117,19 @@ public class Tower : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthText.SetText(health.ToString());
+        SetHealthBar();
+        // healthText.SetText(health.ToString());
         if (health <= 0)
         {
             GameObject coin = Resources.Load<GameObject>("coin");
             coin.GetComponent<MoneyPickup>().spawnCoins(300, transform.position);
             Destroy(gameObject);
         }
+    }
+
+    public void SetHealthBar()
+    {
+        healthBar.fillAmount = health / original_health;
     }
 
     // Slow the rate of fire.

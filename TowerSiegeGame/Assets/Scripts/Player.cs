@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+// using TMPro;
 
 public class Player : MonoBehaviour
 {
+	public Image healthBar;
 	public int health;
 	public float speed;
 	public float buffCooldown;
@@ -13,40 +15,54 @@ public class Player : MonoBehaviour
 	public float debuffRange;
 	public float debuffDuration;
 
-	private GameObject gameController;
-	private TextMeshPro healthText;
-	private TextMeshProUGUI buffText;
-	private TextMeshProUGUI debuffText;
+	// private GameObject gameController;
+	// private TextMeshPro healthText;
+	// private TextMeshProUGUI buffText;
+	// private TextMeshProUGUI debuffText;
+	private Image debuffBar;
+	private Image buffBar;
 	private float buffTimer;
 	private float debuffTimer;
 	private bool buffReady;
 	private bool debuffReady;
 	private bool frozen;
+	private int maxHealth;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		gameController = GameObject.FindGameObjectWithTag("GameController");
-		healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
-		buffText = GameObject.Find("Canvas/BuffText").GetComponent<TextMeshProUGUI>();
-		debuffText = GameObject.Find("Canvas/DebuffText").GetComponent<TextMeshProUGUI>();
+		// gameController = GameObject.FindGameObjectWithTag("GameController");
+		// healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
+		// buffText = GameObject.Find("Canvas/BuffText").GetComponent<TextMeshProUGUI>();
+		// debuffText = GameObject.Find("Canvas/DebuffText").GetComponent<TextMeshProUGUI>();
+
+		buffBar = GameObject.Find("Canvas/BuffText/BuffBG/BuffBar").GetComponent<Image>();
+		debuffBar = GameObject.Find("Canvas/DebuffText/DebuffBG/DebuffBar").GetComponent<Image>();
+
+		Debug.Log(buffBar);
+		Debug.Log(debuffBar);
 
 		frozen = false;
 		buffReady = true;
 		debuffReady = true;
 		buffTimer = 0f;
 		debuffTimer = 0f;
+		maxHealth = health;
 
-		healthText.SetText(health.ToString());
-		SetBuffText();
-		SetDebuffText();
+		SetHealthBar();
+		SetAbilityBars();
+
+		// healthText.SetText(health.ToString());
+		// SetBuffText();
+		// SetDebuffText();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		SetBuffText();
-		SetDebuffText();
+		// SetBuffText();
+		// SetDebuffText();
+		SetAbilityBars();
 		if (!frozen)
 		{
 			// Control the player's movement.
@@ -153,11 +169,23 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	private void SetHealthBar()
+    {
+		healthBar.fillAmount = (float)health / maxHealth;
+	}
+
+	private void SetAbilityBars()
+    {
+		buffBar.fillAmount = (buffCooldown - buffTimer) / buffCooldown;
+		debuffBar.fillAmount = (debuffCooldown - debuffTimer) / debuffCooldown;
+    }
+
 	// Take damage and deactivate if health falls below zero.
 	public void TakeDamage(int damage)
 	{
 		health -= damage;
-		healthText.SetText(health.ToString());
+		SetHealthBar();
+		// healthText.SetText(health.ToString());
 		if (health <= 0)
 		{
 			gameObject.SetActive(false);
@@ -214,7 +242,7 @@ public class Player : MonoBehaviour
         }
     }
 
-	// Set the buff text.
+	/* Set the buff text.
 	private void SetBuffText()
     {
 		if (buffReady)
@@ -226,8 +254,9 @@ public class Player : MonoBehaviour
 			buffText.SetText("[2] " + buffTimer.ToString("0") + "s");
         }
 	}
+	*/
 
-	// Set the debuff text.
+	/* Set the debuff text.
 	private void SetDebuffText()
     {
 		if (debuffReady)
@@ -239,4 +268,5 @@ public class Player : MonoBehaviour
 			debuffText.SetText("[1] " + debuffTimer.ToString("0") + "s");
 		}
 	}
+	*/
 }
