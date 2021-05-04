@@ -21,6 +21,8 @@ public class EndMenu : MonoBehaviour
     public RoundTimer timer;
     public Money gold;
     private bool reloading;
+
+    Castle castlescript;
     /*
     private int maxRound = 3;
     private int currentRound = 1;
@@ -31,6 +33,7 @@ public class EndMenu : MonoBehaviour
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
         castle = GameObject.FindGameObjectWithTag("Castle");
+        castlescript = castle.GetComponent<Castle>();
         player = GameObject.FindGameObjectWithTag("Player");
         reloading = false;
     }
@@ -39,10 +42,15 @@ public class EndMenu : MonoBehaviour
     void Update()
     {
         // End the game if the castle is destroyed.
-        if (!castle.activeSelf)
+        if (castlescript.health <= 0) 
         {
             DisplayEndMenu("CONGRATULATIONS\nYou destroyed the castle.");
         }
+
+        // if (!castle.activeSelf)
+        // {
+        //     DisplayEndMenu("CONGRATULATIONS\nYou destroyed the castle.");
+        // }
 
         // End the game if the player dies.
         if (!player.activeSelf)

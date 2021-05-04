@@ -70,12 +70,16 @@ public class Castle : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthText.SetText(health.ToString());
-        gameObject.GetComponent<Animator>().enabled = false;
         if (health <= 0)
         {
-            gameObject.SetActive(false);
+            health = 0;
         }
+        healthText.SetText(health.ToString());
+        gameObject.GetComponent<Animator>().enabled = false;
+        // if (health <= 0)
+        // {
+        //     gameObject.SetActive(false);
+        // }
     }
 
     
