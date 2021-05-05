@@ -24,4 +24,8 @@ public class BlackoutLevels : MonoBehaviour
     public void defeatedLevel(){
         currentLevel++;
     }
+
+    public void unlockAllLevels(){
+        currentLevel = 20;
+    }
 }
