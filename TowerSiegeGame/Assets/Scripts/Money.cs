@@ -50,7 +50,7 @@
  	public bool HasMoney()
  	{	
  		GameObject[] coins = GameObject.FindGameObjectsWithTag("MoneyBag");
- 		if (currentMoney > 25 || coins.Length > 0)
+ 		if (currentMoney > 49 || coins.Length > 0)
  		{
  			return true;
  		}
