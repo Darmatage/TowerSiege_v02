@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 // using TMPro;
 
 public class Player : MonoBehaviour
@@ -27,17 +28,23 @@ public class Player : MonoBehaviour
 	private bool debuffReady;
 	private bool frozen;
 	private int maxHealth;
+	private int sceneNum;
+	private int buffScene; //number scene where buff appears
+	private int debuffScene; //number scene where debuff appears
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		sceneNum = int.Parse(SceneManager.GetActiveScene().name.Substring(SceneManager.GetActiveScene().name.Length - 1));
+		buffScene = 3;
+		debuffScene = 4;
 		// gameController = GameObject.FindGameObjectWithTag("GameController");
 		// healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
 		// buffText = GameObject.Find("Canvas/BuffText").GetComponent<TextMeshProUGUI>();
 		// debuffText = GameObject.Find("Canvas/DebuffText").GetComponent<TextMeshProUGUI>();
 
-		buffBar = GameObject.Find("Canvas/BuffText/BuffBG/BuffBar").GetComponent<Image>();
-		debuffBar = GameObject.Find("Canvas/DebuffText/DebuffBG/DebuffBar").GetComponent<Image>();
+		if(sceneNum >= buffScene) buffBar = GameObject.Find("Canvas/BuffText/BuffBG/BuffBar").GetComponent<Image>();
+		if(sceneNum >= debuffScene) debuffBar = GameObject.Find("Canvas/DebuffText/DebuffBG/DebuffBar").GetComponent<Image>();
 
 		frozen = false;
 		buffReady = true;
@@ -45,6 +52,7 @@ public class Player : MonoBehaviour
 		buffTimer = 0f;
 		debuffTimer = 0f;
 		maxHealth = health;
+		
 
 		SetHealthBar();
 		SetAbilityBars();
@@ -57,6 +65,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		sceneNum = int.Parse(SceneManager.GetActiveScene().name.Substring(SceneManager.GetActiveScene().name.Length - 1));
 		// SetBuffText();
 		// SetDebuffText();
 		SetAbilityBars();
@@ -145,8 +154,10 @@ public class Player : MonoBehaviour
             }
 
 			// Use buff.
-			if (Input.GetKey(KeyCode.Alpha2))
+			
+			if (Input.GetKey(KeyCode.Alpha2) && sceneNum >= buffScene)
 			{
+
 				if (buffReady)
 				{
 					Buff();
@@ -155,7 +166,7 @@ public class Player : MonoBehaviour
 			}
 
 			// Use debuff.
-			if (Input.GetKey(KeyCode.Alpha1))
+			if (Input.GetKey(KeyCode.Alpha1) && sceneNum >= debuffScene)
             {
 				if (debuffReady)
                 {
@@ -173,8 +184,8 @@ public class Player : MonoBehaviour
 
 	private void SetAbilityBars()
     {
-		buffBar.fillAmount = (buffCooldown - buffTimer) / buffCooldown;
-		debuffBar.fillAmount = (debuffCooldown - debuffTimer) / debuffCooldown;
+		if(sceneNum >= buffScene) buffBar.fillAmount = (buffCooldown - buffTimer) / buffCooldown;
+		if(sceneNum >= debuffScene) debuffBar.fillAmount = (debuffCooldown - debuffTimer) / debuffCooldown;
     }
 
 	// Take damage and deactivate if health falls below zero.
