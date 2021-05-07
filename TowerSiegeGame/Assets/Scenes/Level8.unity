@@ -6868,8 +6868,8 @@ Tilemap:
   - first: {x: 14, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileIndex: 16
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6877,8 +6877,8 @@ Tilemap:
   - first: {x: 15, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileIndex: 16
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -10167,15 +10167,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b4a81885dc2d142049483703ea14cfdd, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 30447aecebec64b1ab4f4b47ab6781fa, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: aa74d9ce7206649888ce274dd78beaf8, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5911f385a60ff4dceadce810dd586c1e, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 8298f8d94256c4621adfa7e491e3372b, type: 2}
-  - m_RefCount: 99
+  - m_RefCount: 101
     m_Data: {fileID: 11400000, guid: b1f11f14903a9445dbc0176bc2227863, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: f0aeb274496a64ea79c2d99f7ee85fb1, type: 2}
@@ -10222,9 +10222,8 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -2812729446567124775, guid: ef8f75c5c176c41e8925ec363e63a276,
       type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 8552266216927638869, guid: ef8f75c5c176c41e8925ec363e63a276,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 12
     m_Data: {fileID: 5457057339851748954, guid: 7142e8efc82f34697bb8233c16a27820,
       type: 3}
@@ -10234,7 +10233,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -7899757187698013252, guid: 7142e8efc82f34697bb8233c16a27820,
       type: 3}
-  - m_RefCount: 99
+  - m_RefCount: 101
     m_Data: {fileID: -6528215883073420902, guid: 7142e8efc82f34697bb8233c16a27820,
       type: 3}
   - m_RefCount: 13
@@ -15665,6 +15664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473409634470811953, guid: 58b8a836aec17ba47a6550d9a9888863,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5473409634470811955, guid: 58b8a836aec17ba47a6550d9a9888863,
         type: 3}
