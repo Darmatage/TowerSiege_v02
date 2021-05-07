@@ -15,6 +15,7 @@ TagManager:
   - ArcherArrow
   - VolumeSlider
   - UnlockAllButton
+  - SFX
   layers:
   - Default
   - TransparentFX
