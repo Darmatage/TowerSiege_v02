@@ -12,6 +12,7 @@ TagManager:
   - MoneySymbol
   - Button
   - BackgroundMusic
+  - ArcherArrow
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Projectiles
   - Castle
   - MoneyBags
-  - 
+  - ArcherArrows
   - 
   - 
   - 
