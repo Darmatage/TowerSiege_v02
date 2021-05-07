@@ -4,14 +4,14 @@
  * Note: To add waypoints, follow the pattern in the hierarcy exactly. Units will traverse the waypoints in order.
  */
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+ using System.Collections;
+ using System.Collections.Generic;
+ using UnityEngine;
+ using UnityEngine.UI;
 // using TMPro;
 
-public class Unit : MonoBehaviour
-{
+ public class Unit : MonoBehaviour
+ {
     public Image healthBar;
     public int health;
     public float speed;
@@ -26,6 +26,9 @@ public class Unit : MonoBehaviour
     private int waypointIndex;
     private float attackTimer;
     private int maxHealth;
+    private float shootTimer;
+    private float archerInterval = .5f;
+    private int id;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +44,7 @@ public class Unit : MonoBehaviour
         waypointIndex = 0;
         maxHealth = health;
         attackTimer = attackFreq;
+        shootTimer = Time.deltaTime;
 
         /* Set the health text.
         healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
@@ -60,7 +64,33 @@ public class Unit : MonoBehaviour
 
         // Get the current waypoint coordinates from waypoints[] and move toward them.
         Vector2 currWaypoint = waypoints[waypointIndex];
-        transform.position = Vector2.MoveTowards(transform.position, currWaypoint, speed * Time.deltaTime);
+
+        if(gameObject.name.ToLower().Contains("archer")) {
+            GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+            GameObject tower = null;
+            bool inrange = false;
+            foreach(GameObject t in towers) {
+                if(t.GetComponent<Tower>().InRange(gameObject)) {
+                    inrange = true;
+                    tower = t;
+                }
+            }
+            if(inrange) {
+                if(Time.deltaTime > shootTimer) {
+                    GameObject arrow = Instantiate(Resources.Load<GameObject>("archerArrow"));
+                    arrow.transform.position = transform.position;
+                    arrow.GetComponent<ArcherArrow>().MoveToCastle(tower.GetComponent<Tower>().transform.position);
+                    shootTimer = archerInterval + Time.deltaTime;
+                }
+            }
+            else {
+                transform.position = Vector2.MoveTowards(transform.position, currWaypoint, speed * Time.deltaTime);
+                shootTimer = Time.deltaTime;
+            }
+        }
+        else {
+            transform.position = Vector2.MoveTowards(transform.position, currWaypoint, speed * Time.deltaTime);
+        }
 
         // Increment the current waypoint index if the current waypoint has been reached.
         if (transform.position.x == currWaypoint.x && transform.position.y == currWaypoint.y)

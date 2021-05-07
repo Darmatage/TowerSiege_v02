@@ -168,7 +168,7 @@ public class Tower : MonoBehaviour
     }
 
     // Check if a unit is within range.
-    private bool InRange(GameObject unit)
+    public bool InRange(GameObject unit)
     {
         Vector3 difference = unit.transform.position - transform.position;
         float distance = difference.sqrMagnitude;
