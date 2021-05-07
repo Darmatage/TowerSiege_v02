@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BlackoutLevels : MonoBehaviour
 {
@@ -27,5 +28,6 @@ public class BlackoutLevels : MonoBehaviour
 
     public void unlockAllLevels(){
         currentLevel = 20;
+        Destroy(gameObject);
     }
 }

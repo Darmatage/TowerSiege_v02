@@ -10,7 +10,6 @@ public class VolumeControl : MonoBehaviour
 	private List<AudioSource> audioSources = new List<AudioSource>();
     public static float volume;
 	public Slider volumeSlider;
-    private static int id;
     
 
     void Start()
