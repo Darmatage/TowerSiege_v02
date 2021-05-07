@@ -8,10 +8,11 @@ public class VolumeControl : MonoBehaviour
 {
 	private GameObject[] audios;
 	private List<AudioSource> audioSources = new List<AudioSource>();
-    private float volume;
+    public static float volume;
 	public Slider volumeSlider;
+    private static int id;
+    
 
-    // Start is called before the first frame update
     void Start()
     {
         audios = GameObject.FindGameObjectsWithTag("Audio");
@@ -19,7 +20,7 @@ public class VolumeControl : MonoBehaviour
         {
         	audioSources.Add(currAudio.GetComponent<AudioSource>());
         }
-        ChangeVolume();
+        volumeSlider.value = volume;
     }
 
     // Update is called once per frame
