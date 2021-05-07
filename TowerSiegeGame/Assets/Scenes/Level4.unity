@@ -2557,12 +2557,12 @@ PrefabInstance:
     - target: {fileID: 6761091724439792728, guid: a5d3f471b96e94ccca5e86da706b61a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 6761091724439792728, guid: a5d3f471b96e94ccca5e86da706b61a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.20756924
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6761091724439792728, guid: a5d3f471b96e94ccca5e86da706b61a0,
         type: 3}
@@ -13732,7 +13732,7 @@ GameObject:
   - component: {fileID: 693452469}
   m_Layer: 0
   m_Name: BackgroundNoise
-  m_TagString: Audio
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
