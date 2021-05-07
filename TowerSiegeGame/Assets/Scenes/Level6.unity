@@ -3527,7 +3527,7 @@ PrefabInstance:
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -386
+      value: -391
       objectReference: {fileID: 0}
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
@@ -3886,12 +3886,12 @@ PrefabInstance:
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -381
+      value: -383
       objectReference: {fileID: 0}
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 299
       objectReference: {fileID: 0}
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
@@ -5113,7 +5113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d8d122852b71649aefbffbc6330903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 2000
+  money: 4000
 --- !u!114 &386393023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25115,12 +25115,12 @@ PrefabInstance:
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -386
+      value: -385
       objectReference: {fileID: 0}
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -66
+      value: -69
       objectReference: {fileID: 0}
     - target: {fileID: 5367963784854245058, guid: 08f55f0e916173c4c858e1cb8eba0ca3,
         type: 3}
