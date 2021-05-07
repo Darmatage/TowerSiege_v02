@@ -27,7 +27,7 @@
     private float attackTimer;
     private int maxHealth;
     private float shootTimer;
-    private float archerInterval = .5f;
+    private float archerInterval = 1f;
     private int id;
 
     // Start is called before the first frame update

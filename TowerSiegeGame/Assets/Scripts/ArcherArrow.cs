@@ -6,6 +6,7 @@ public class ArcherArrow : MonoBehaviour
 {
 	private Vector3 target;
 	public float speed;
+    public GameObject archer;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class ArcherArrow : MonoBehaviour
     {
         if (collision.gameObject.tag == "Tower")
         {
-            collision.gameObject.GetComponent<Tower>().TakeDamage(2);
+            collision.gameObject.GetComponent<Tower>().TakeDamage(archer.GetComponent<Unit>().damage);
             Destroy(gameObject);
         }
     }

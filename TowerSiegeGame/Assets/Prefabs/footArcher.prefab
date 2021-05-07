@@ -322,10 +322,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2860579237731869874}
-  health: 2
-  speed: 2
-  damage: 2
-  cost: 150
+  health: 1
+  speed: 4
+  damage: 1
+  cost: 250
   attackFreq: 1
 --- !u!95 &1746888100665825593
 Animator:

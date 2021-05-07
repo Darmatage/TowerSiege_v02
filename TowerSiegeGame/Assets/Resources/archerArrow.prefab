@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  archer: {fileID: 4881600605423940039, guid: 4f856da10a9784a9c982176c71537321, type: 3}
