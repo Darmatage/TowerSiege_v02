@@ -80,36 +80,44 @@ public class Player : MonoBehaviour
 				position.x = position.x - speed;
 				this.transform.position = position;
 				
+				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("left");
 			}
-			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+			else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
 				//print("going right");
 				Vector3 position = this.transform.position;
 				position.x = position.x + speed;
 				this.transform.position = position;
 
+				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("right");
 
 			}
-			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+			else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
 			{
 				//print("going up");
 				Vector3 position = this.transform.position;
 				position.y = position.y + speed;
 				this.transform.position = position;
 
+				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("up");
 
 			}
-			if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+			else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
 			{
 				//print("going down");
 				Vector3 position = this.transform.position;
 				position.y = position.y - speed;
 				this.transform.position = position;
 
+				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("down");
+			}
+			else 
+			{
+				GetComponent<Animator>().enabled = false;
 			}
 
 			// animator stuff

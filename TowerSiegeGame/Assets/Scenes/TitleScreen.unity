@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tower Seige
+  m_text: Tower Siege
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b8ac968996674ecb8a4cd7dabbd8adf, type: 2}
   m_sharedMaterial: {fileID: 6347734477995731753, guid: 0b8ac968996674ecb8a4cd7dabbd8adf,
