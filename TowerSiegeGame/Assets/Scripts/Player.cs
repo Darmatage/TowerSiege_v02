@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		
 		sceneNum = int.Parse(SceneManager.GetActiveScene().name.Substring(SceneManager.GetActiveScene().name.Length - 1));
 		// SetBuffText();
 		// SetDebuffText();
@@ -79,7 +80,7 @@ public class Player : MonoBehaviour
 				position.x = position.x - speed;
 				this.transform.position = position;
 				
-				// GetComponent<Animator>().SetTrigger("Left");
+				GetComponent<Animator>().SetTrigger("left");
 			}
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
@@ -88,7 +89,7 @@ public class Player : MonoBehaviour
 				position.x = position.x + speed;
 				this.transform.position = position;
 
-				// GetComponent<Animator>().SetTrigger("Right");
+				GetComponent<Animator>().SetTrigger("right");
 
 			}
 			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour
 				position.y = position.y + speed;
 				this.transform.position = position;
 
-				// GetComponent<Animator>().SetTrigger("Up");
+				GetComponent<Animator>().SetTrigger("up");
 
 			}
 			if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
@@ -108,7 +109,7 @@ public class Player : MonoBehaviour
 				position.y = position.y - speed;
 				this.transform.position = position;
 
-				// GetComponent<Animator>().SetTrigger("Down");
+				GetComponent<Animator>().SetTrigger("down");
 			}
 
 			// animator stuff
@@ -249,6 +250,17 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+	private void ResetAllTriggers()
+	{
+		foreach (var param in GetComponent<Animator>().parameters)
+		{
+			if (param.type == AnimatorControllerParameterType.Trigger)
+			{
+				GetComponent<Animator>().ResetTrigger(param.name);
+			}
+		}
+	}
 
 	/* Set the buff text.
 	private void SetBuffText()
