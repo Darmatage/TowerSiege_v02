@@ -16,6 +16,7 @@ TagManager:
   - VolumeSlider
   - UnlockAllButton
   - SFX
+  - Scroll
   layers:
   - Default
   - TransparentFX
