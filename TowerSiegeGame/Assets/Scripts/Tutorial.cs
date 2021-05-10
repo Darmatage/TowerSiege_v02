@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
-    public static bool isTutorial = false;
+    public static bool isTutorial = true;
     public GameObject scrollUI;
     private GameObject player;
 
@@ -26,6 +26,8 @@ public class Tutorial : MonoBehaviour
             if (Input.anyKeyDown) {
                 Resume();
             }
+        } else {
+            this.enabled = false;
         }
     }
 
