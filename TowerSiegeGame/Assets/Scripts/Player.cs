@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 // using TMPro;
 
 public class Player : MonoBehaviour
-{
+{	
 	public Image healthBar;
 	public int health;
 	public float speed;

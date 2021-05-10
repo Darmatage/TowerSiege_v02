@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BackgroundAudio : MonoBehaviour
 {
+    
     private void Awake()
     {
         GameObject[] musicObj = GameObject.FindGameObjectsWithTag("BackgroundMusic");
-        if ( musicObj.Length > 1)
+        if ( musicObj.Length > 1 )
         {
             Destroy( this.gameObject );
         }
@@ -25,3 +26,5 @@ public class BackgroundAudio : MonoBehaviour
         }
     }
 }
+
+// https://www.youtube.com/watch?v=ptkxRn0HCJc
