@@ -58,7 +58,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1360039173
-  m_SortingOrder: 100
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!114 &6954310082556779713
 MonoBehaviour:
@@ -540,8 +540,6 @@ MonoBehaviour:
   - {fileID: 7910356227285057626, guid: a71e9374b86a44906882fd603a4f7b8c, type: 3}
   - {fileID: 5743687618377918515, guid: a71e9374b86a44906882fd603a4f7b8c, type: 3}
   spriteRenderer: {fileID: 4730760154506453629}
-  towerCollapse: {fileID: 8300000, guid: 1956262625f9f4c3ea1386124bdec961, type: 3}
-  audioSrc: {fileID: 0}
 --- !u!1 &4801483418846727029
 GameObject:
   m_ObjectHideFlags: 0

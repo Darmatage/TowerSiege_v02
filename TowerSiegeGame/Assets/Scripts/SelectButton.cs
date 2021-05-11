@@ -22,7 +22,7 @@ public class SelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    	print(unit.GetComponent<Unit>().health);
+    	// print(unit.GetComponent<Unit>().health);
     	this.transform.Find("CostText").gameObject.GetComponent<TextMeshProUGUI>().text = (unit.GetComponent<Unit>().cost).ToString();
     	this.transform.Find("HealthText").gameObject.GetComponent<TextMeshProUGUI>().text = (unit.GetComponent<Unit>().health).ToString();
     	this.transform.Find("SpeedText").gameObject.GetComponent<TextMeshProUGUI>().text = (unit.GetComponent<Unit>().speed).ToString();

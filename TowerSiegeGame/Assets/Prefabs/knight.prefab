@@ -500,7 +500,7 @@ MonoBehaviour:
   health: 5
   speed: 3
   damage: 3
-  cost: 300
+  cost: 400
   attackFreq: 1
 --- !u!95 &7554320845016625331
 Animator:
