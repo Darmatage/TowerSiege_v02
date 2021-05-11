@@ -26,5 +26,3 @@ public class BackgroundAudio : MonoBehaviour
         }
     }
 }
-
-// https://www.youtube.com/watch?v=ptkxRn0HCJc

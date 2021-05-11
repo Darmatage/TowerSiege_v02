@@ -405,7 +405,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 2.9023848, y: 2.4933977}
   m_EdgeRadius: 0
@@ -540,6 +540,8 @@ MonoBehaviour:
   - {fileID: 7910356227285057626, guid: a71e9374b86a44906882fd603a4f7b8c, type: 3}
   - {fileID: 5743687618377918515, guid: a71e9374b86a44906882fd603a4f7b8c, type: 3}
   spriteRenderer: {fileID: 4730760154506453629}
+  towerCollapse: {fileID: 8300000, guid: 1956262625f9f4c3ea1386124bdec961, type: 3}
+  audioSrc: {fileID: 0}
 --- !u!1 &4801483418846727029
 GameObject:
   m_ObjectHideFlags: 0
