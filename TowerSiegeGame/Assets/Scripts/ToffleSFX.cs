@@ -25,6 +25,8 @@ public class ToffleSFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    	//sfxToggle.isOn = toggleSFX;
+    	print(toggleSFX);
     	foreach (AudioSource audio in audioSources) 
         {
             if(toggleSFX) audio.volume = 1;
@@ -33,6 +35,6 @@ public class ToffleSFX : MonoBehaviour
     }
 
     public void toggleSFXon(bool value) {
-    	toggleSFX = !toggleSFX;
+    	toggleSFX = sfxToggle.isOn;
     }
 }
