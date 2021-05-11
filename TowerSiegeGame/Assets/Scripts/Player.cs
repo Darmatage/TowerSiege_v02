@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 // using TMPro;
 
 public class Player : MonoBehaviour
-{	
+{
 	public Image healthBar;
 	public int health;
 	public float speed;
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
 	{
 		sceneNum = int.Parse(SceneManager.GetActiveScene().name.Substring(SceneManager.GetActiveScene().name.Length - 1));
 		buffScene = 3;
-		debuffScene = 4;
+		debuffScene = 5;
 		// gameController = GameObject.FindGameObjectWithTag("GameController");
 		// healthText = transform.GetChild(0).gameObject.GetComponent<TextMeshPro>();
 		// buffText = GameObject.Find("Canvas/BuffText").GetComponent<TextMeshProUGUI>();
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 		buffTimer = 0f;
 		debuffTimer = 0f;
 		maxHealth = health;
-		
+
 
 		SetHealthBar();
 		SetAbilityBars();
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
+
 		sceneNum = int.Parse(SceneManager.GetActiveScene().name.Substring(SceneManager.GetActiveScene().name.Length - 1));
 		// SetBuffText();
 		// SetDebuffText();
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
 				Vector3 position = this.transform.position;
 				position.x = position.x - speed;
 				this.transform.position = position;
-				
+
 				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("left");
 			}
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
 				GetComponent<Animator>().enabled = true;
 				GetComponent<Animator>().SetTrigger("down");
 			}
-			else 
+			else
 			{
 				GetComponent<Animator>().enabled = false;
 			}
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
             }
 
 			// Use buff.
-			
+
 			if (Input.GetKey(KeyCode.Alpha2) && sceneNum >= buffScene)
 			{
 

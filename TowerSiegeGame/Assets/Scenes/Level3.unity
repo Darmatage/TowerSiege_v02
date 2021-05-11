@@ -2968,7 +2968,7 @@ PrefabInstance:
     - target: {fileID: 1902395608591389507, guid: c26b8a8f6692171408d262afdc546d6d,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2970974976401926203, guid: c26b8a8f6692171408d262afdc546d6d,
         type: 3}
@@ -8472,7 +8472,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18754,7 +18754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1194520964
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24361,7 +24361,7 @@ PrefabInstance:
     - target: {fileID: 3932437239368129580, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 3932437239368129580, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
@@ -24414,7 +24414,8 @@ PrefabInstance:
       value: "What's poppin Mr. Wizard,\n\tWoof, looks like it's getting pretty tricky
         out there. Good thing I'm at home big chillin'. Kinda sucks for the soldiers
         though... Hey, maybe you could help them out?\n\n\n\nP.S. I sent a self-portrait
-        last level but you didn't reply so I thought maybe it didn't get to yet."
+        last level but you didn't reply so I thought maybe it didn't get to yet.
+        ~ King"
       objectReference: {fileID: 0}
     - target: {fileID: 8523256082446271119, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
@@ -28920,8 +28921,8 @@ RectTransform:
   m_Father: {fileID: 1507682462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.2, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -424,7 +424,7 @@ MonoBehaviour:
   healthBar: {fileID: 4779630250536343641}
   health: 3
   speed: 4
-  damage: 3
+  damage: 4
   cost: 300
   attackFreq: 1
   spriteRenderer: {fileID: 6615282085189308200}
