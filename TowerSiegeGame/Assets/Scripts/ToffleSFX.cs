@@ -29,7 +29,7 @@ public class ToffleSFX : MonoBehaviour
     	print(toggleSFX);
     	foreach (AudioSource audio in audioSources) 
         {
-            if(toggleSFX) audio.volume = 1;
+            if(toggleSFX) audio.volume = .04f;
             else audio.volume = 0;
         }
     }
