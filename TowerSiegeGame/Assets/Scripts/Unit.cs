@@ -30,6 +30,8 @@
     private float archerInterval = 1f;
     private int id;
 
+    public SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +57,7 @@
     // Update is called once per frame
     void Update()
     {
+        float old_position_x = transform.position.x;
         // Destroy the unit if it has reached its last waypoint.
         if (waypointIndex == numWaypoints)
         {
@@ -102,15 +105,11 @@
         }
 
         // animator stuff
-        // if (transform.position.x > 0) {
-        //     GetComponent<Animator>().SetTrigger("Right");
-        // } else if (transform.position.x < 0) {
-        //     GetComponent<Animator>().SetTrigger("Left");
-        // } else if (transform.position.y > 0) {
-        //     GetComponent<Animator>().SetTrigger("Up");
-        // } else {
-        //     GetComponent<Animator>().SetTrigger("Down");
-        // }
+        if (old_position_x > transform.position.x) {
+            spriteRenderer.flipX = true;
+        } else {
+            spriteRenderer.flipX = false;
+        }
     }
 
     // Set the spawn index to determine which waypoints the unit follows.

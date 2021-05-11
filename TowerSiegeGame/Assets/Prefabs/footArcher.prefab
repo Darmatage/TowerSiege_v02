@@ -327,6 +327,7 @@ MonoBehaviour:
   damage: 1
   cost: 200
   attackFreq: 1
+  spriteRenderer: {fileID: 4192357356505665094}
 --- !u!95 &1746888100665825593
 Animator:
   serializedVersion: 3
