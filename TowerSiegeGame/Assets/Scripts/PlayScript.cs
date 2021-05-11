@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayScript : MonoBehaviour
 {
     public int levelsImplemented;
+    public GameObject music;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +35,10 @@ public class PlayScript : MonoBehaviour
         }
     }
 
-    public void PlayGame() 
+    public void PlayGame()
     {
         Time.timeScale = 1f;
+        music.GetComponent<AudioSource>().Stop();
     	SceneManager.LoadScene("LevelMenu");
     }
 

@@ -2069,6 +2069,7 @@ GameObject:
   - component: {fileID: 208388096}
   - component: {fileID: 208388095}
   - component: {fileID: 208388100}
+  - component: {fileID: 208388101}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -2160,6 +2161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1485302609}
   pauseIcon: {fileID: 1764233598}
+--- !u!114 &208388101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208388094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37df1d341bb9495aa589c57becd9b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollUI: {fileID: 876133148}
 --- !u!1 &212040579
 GameObject:
   m_ObjectHideFlags: 0
@@ -16467,6 +16481,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 876133146}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &876133148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8523256082446271119, guid: 02b8f059d5d5241e695d34630c311d22,
+    type: 3}
+  m_PrefabInstance: {fileID: 876133146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &894729821
 GameObject:
   m_ObjectHideFlags: 0
@@ -17633,8 +17653,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 92a4c5360985a478bb4c56855cc82670, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2

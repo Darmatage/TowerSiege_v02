@@ -8,14 +8,14 @@ public class VolumeControl : MonoBehaviour
 {
 	private GameObject[] audios;
 	private List<AudioSource> audioSources = new List<AudioSource>();
-    public static float volume;
+    public static float volume = 0.2f;
 	public Slider volumeSlider;
-    
+
 
     void Start()
     {
         audios = GameObject.FindGameObjectsWithTag("Audio");
-        foreach (GameObject currAudio in audios) 
+        foreach (GameObject currAudio in audios)
         {
         	audioSources.Add(currAudio.GetComponent<AudioSource>());
         }
@@ -25,7 +25,7 @@ public class VolumeControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (AudioSource audio in audioSources) 
+        foreach (AudioSource audio in audioSources)
         {
             audio.volume = volume;
         }
