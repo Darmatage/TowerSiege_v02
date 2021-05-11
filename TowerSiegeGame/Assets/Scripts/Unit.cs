@@ -58,6 +58,9 @@
         // Destroy the unit if it has reached its last waypoint.
         if (waypointIndex == numWaypoints)
         {
+            GameObject coin = Resources.Load<GameObject>("coin");
+            int newCost = cost/3;
+            coin.GetComponent<MoneyPickup>().spawnCoins(newCost, transform.position);
             Destroy(gameObject);
             return;
         }
@@ -125,7 +128,7 @@
         if (health <= 0)
         {  
         	GameObject coin = Resources.Load<GameObject>("coin");
-        	int newCost = cost/2;
+        	int newCost = cost/3;
             coin.GetComponent<MoneyPickup>().spawnCoins(newCost, transform.position);
             Destroy(gameObject);
         }

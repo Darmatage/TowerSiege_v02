@@ -399,7 +399,7 @@ MonoBehaviour:
   healthBar: {fileID: 2781828750720020867}
   health: 6
   speed: 3
-  damage: 5
+  damage: 6
   cost: 500
   attackFreq: 1
 --- !u!95 &6926465532543371224
