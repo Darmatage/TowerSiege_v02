@@ -24638,8 +24638,8 @@ PrefabInstance:
       value: "Yo Wiz,\n\tHeard everything is going well out there. Looking forward
         to more good news, money, and memories made with friends :). Speaking of
         memory, I don't remember seeing a gold tower before. Be careful, it seems
-        better protected and its height grants further reach. Seems like a good time
-        to knock 'em down a few pegs\n"
+        better protected and its height grants further reach. See if you can slow
+        their roll.\n\t\t\t\t\t\t~Ya boy, The King\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8523256082446271119, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}

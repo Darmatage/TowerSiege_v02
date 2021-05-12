@@ -24414,8 +24414,8 @@ PrefabInstance:
       value: "What's poppin Mr. Wizard,\n\tWoof, looks like it's getting pretty tricky
         out there. Good thing I'm at home big chillin'. Kinda sucks for the soldiers
         though... Hey, maybe you could help them out?\n\n\n\nP.S. I sent a self-portrait
-        last level but you didn't reply so I thought maybe it didn't get to yet.
-        ~ King"
+        last level but you didn't reply so maybe it didn't get to you yet haha. ~King
+        <3"
       objectReference: {fileID: 0}
     - target: {fileID: 8523256082446271119, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}

@@ -16319,6 +16319,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1755199481}
     m_Modifications:
+    - target: {fileID: 1884546898082990806, guid: 02b8f059d5d5241e695d34630c311d22,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070715943695235562, guid: 02b8f059d5d5241e695d34630c311d22,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 112.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3932437239368129580, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16442,22 +16452,22 @@ PrefabInstance:
     - target: {fileID: 3996005372353360285, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 3996005372353360285, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.8415
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3996005372353360285, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 3023.8926
+      value: 2946.7637
       objectReference: {fileID: 0}
     - target: {fileID: 3996005372353360285, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2308.8193
+      value: 2193.127
       objectReference: {fileID: 0}
     - target: {fileID: 5653582127880732407, guid: 02b8f059d5d5241e695d34630c311d22,
         type: 3}
@@ -16465,7 +16475,7 @@ PrefabInstance:
       value: "What's cookin' good lookin?\n\tWait.. hold on - why does one of the
         paths not go to the castle? I think they forgot to finish the path. This
         is simply awful design and I can't fathom why they would do this. Maybe you
-        can figure it out? If you do send units that way just make sure to collect
+        can figure it out? If you do send units that way, just make sure to collect
         their tithes.\n\t\t\t\t\t\tGotta Blast, King"
       objectReference: {fileID: 0}
     - target: {fileID: 8523256082446271119, guid: 02b8f059d5d5241e695d34630c311d22,
